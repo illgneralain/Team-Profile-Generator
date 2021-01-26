@@ -8,5 +8,7 @@ test("set Github account using constructor", () => {
 
 test("using getRole()", () => {
     const testValue = "Engineer";
-    const newbie = new engineer
-}
+    const newbie = new engineer("Woo", 1, "test@test.com", "GitHubUser");
+    expect(newbie.getRole()).toBe(testValue);
+});
+
