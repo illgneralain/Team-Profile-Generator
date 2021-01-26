@@ -6,3 +6,14 @@ test("set school using constructor", () => {
     expect(newbie.school).toBe(testValue);
 });
 
+test("using getRole() to return", () => {
+    const testValue = "intern";
+    const newbie = new intern("Woo", 1, "test@test.com", "NYU");
+    expect(newbie.getRole()),toBe(testValue);
+});
+
+test("get school via function", () => {
+    const testValue = "NYU";
+    cont newbie = new intern("Woo", 1, "test@test.com", testValue);
+    expect(newbie.getSchool()).toBe(testValue);
+});
