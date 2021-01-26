@@ -13,6 +13,7 @@ test("sets name using constructor", () => {
 
 test("set id using constructor"), () => {
     const testValue = 100;
-    const newbie = new employee("Woo," testValue)
+    const newbie = new employee("Woo", testValue);
+    expect(newbie.id).toBe(testValue);
 }
 
