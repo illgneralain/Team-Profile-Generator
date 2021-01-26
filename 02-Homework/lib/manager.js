@@ -7,5 +7,10 @@ class manager extends employee {
         this.officeSpace = officeSpace;
     }
 
+    getofficeSpace() {
+        return this.officeSpace;
+    }
     
 }
+
+module.exports = manager
