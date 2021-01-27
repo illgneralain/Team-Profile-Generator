@@ -88,10 +88,20 @@ async function prompt(){
                     name: "x",
                     message: "Which office space number belongs to the employee?"
                 }, ]);
-                const engineer = new Engineer(response.name, response.id, response.email, response2.x);
-                ourArray.push(engineer);
+                const manager = new Manager(response.name, response.id, response.email, response2.x);
+                ourArray.push(manager);
             }
-            }
+            } catch (err) {
+                return console.log(err);
         }
-    }
+        finalResponse = await inquirer.prompt([{
+            type: "list",
+            name: "finish",
+            message: "Do you wish to add more employees?" ,
+            choices: [ 
+                "Yes",
+                "No"
+            ]
+        }, ]);
+    } while (finalResponse.finish === "Yes");
 }
