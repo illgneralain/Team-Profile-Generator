@@ -80,7 +80,17 @@ async function prompt(){
                     message: "What school did this employee attend?",
                 },
                 ]);
-            }  
+                const intern = new Intern(response.name, response.id, response.email, response2.x);
+                ourArray.push(intern);
+            }  else if (response.role === "Manager") {
+                response2 = await inquirer.prompt([{
+                    type: "input",
+                    name: "x",
+                    message: "Which office space number belongs to the employee?"
+                }, ]);
+                const engineer = new Engineer(response.name, response.id, response.email, response2.x);
+                ourArray.push(engineer);
+            }
             }
         }
     }
