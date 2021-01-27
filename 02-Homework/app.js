@@ -72,7 +72,7 @@ async function prompt(){
                 }, ]);
 
                 const engineer = new Engineer(response.name, response.id, response.email, response2.x);
-                ourArray.push(engineer);
+                ourArray.push(ngineer);
             } else if (response.role === "Intern"){
                 response2 = await inquirer.prompt([{
                     type: "input",
