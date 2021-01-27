@@ -71,7 +71,16 @@ async function prompt(){
                     message: "Input the employee's github username"
                 }, ]);
 
-                const engineer = new Engineer  
+                const engineer = new Engineer(response.name, response.id, response.email, response2.x);
+                ourArray.push(engineer);
+            } else if (response.role === "Intern"){
+                response2 = await inquirer.prompt([{
+                    type: "input",
+                    name: "x",
+                    message: "What school did this employee attend?",
+                },
+                ]);
+            }  
             }
         }
     }
