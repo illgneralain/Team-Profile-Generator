@@ -4,7 +4,7 @@ const util = require("util");
 const manager = require("./lib/manager");
 const engineer = require("./lib/engineer");
 const intern = require("./lib/intern");
-
+const html = require("./index")
 
 const writeFile = util.promisify(fs.writeFile);
 const appendFile = util.promisify(fs.appendFile);
@@ -16,12 +16,12 @@ async function team(){
     try {
         await prompt ()
 
-        for (let i = 0; i < teamArray.length; i++) {
-            teamstr = teamstr + html.generateCard(ourArray[i]);
+        for (let i = 0; i < ourArray.length; i++) {
+            ourStr = ourStr + html.generateCard(ourArray[i]);
         }
-        let ourHTML = html.generateHTML(teamstr) 
+        let ourHTML = html.generateHTML(ourStr) 
 
-        writeFileAsync("./index.html", ourHTML)
+        writeFileAsync("./index/index.html", ourHTML)
     } 
     catch (err) {
         return console.log(err);
