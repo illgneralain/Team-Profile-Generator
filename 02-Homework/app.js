@@ -12,6 +12,22 @@ const appendFile = util.promisify(fs.appendFile);
 let ourStr = '';
 let ourArray = [];
 
+async function main(){
+    try {
+        await prompt ()
+
+        for (let i = 0; i < teamArray.length; i++) {
+            teamstr = teamstr + html.generateCard(ourArray[i]);
+        }
+        let ourHTML = html.generateHTML(teamstr) 
+
+        writeFileAsync("./index.html", ourHTML)
+    } 
+    catch (err) {
+        return console.log(err);
+    }
+};
+
 async function prompt(){
     let finalResponse = "";
 
@@ -37,7 +53,7 @@ async function prompt(){
                 {
                     type: "input",
                     name: "role",
-                    message: "Role of employee?"
+                    message: "Role of employee?",
                     choices: [
                         "Engineer",
                         "Intern",
