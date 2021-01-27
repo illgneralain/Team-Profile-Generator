@@ -51,7 +51,7 @@ async function prompt(){
                     message: "Employee email?"
                 },
                 {
-                    type: "input",
+                    type: "list",
                     name: "role",
                     message: "Role of employee?",
                     choices: [
@@ -103,6 +103,6 @@ async function prompt(){
                 "No"
             ]
         }, ]);
-    } while (finalResponse.finish === "Yes");
+    } while (finalResponse.finish === "Yes");l
 }
 team();
