@@ -12,7 +12,7 @@ const appendFile = util.promisify(fs.appendFile);
 let ourStr = '';
 let ourArray = [];
 
-async function main(){
+async function team(){
     try {
         await prompt ()
 
@@ -105,3 +105,4 @@ async function prompt(){
         }, ]);
     } while (finalResponse.finish === "Yes");
 }
+team();
