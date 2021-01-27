@@ -6,8 +6,8 @@ const engineer = require("./lib/engineer");
 const intern = require("./lib/intern");
 const html = require("./index")
 
-const writeFile = util.promisify(fs.writeFile);
-const appendFile = util.promisify(fs.appendFile);
+const writeFileAsync = util.promisify(fs.writeFile);
+const appendFileAsync = util.promisify(fs.appendFile);
 
 let ourStr = '';
 let ourArray = [];
