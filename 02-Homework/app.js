@@ -21,7 +21,7 @@ async function team(){
         }
         let ourHTML = html.generateHTML(ourStr) 
 
-        writeFileAsync("./index/index.html", ourHTML)
+        writeFileAsync("./index/index.htmlno", ourHTML)
     } 
     catch (err) {
         return console.log(err);
