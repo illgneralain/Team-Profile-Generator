@@ -23,8 +23,40 @@ async function prompt(){
                     type: "input",
                     name: "name",
                     message: "Employee name?"
+                },
+                {
+                    type: "input",
+                    name: "id",
+                    message: "Employee id?"
+                },
+                {
+                    type: "input",
+                    name: "email",
+                    message: "Employee email?"
+                },
+                {
+                    type: "input",
+                    name: "role",
+                    message: "Role of employee?"
+                    choices: [
+                        "Engineer",
+                        "Intern",
+                        "Manager"
+                    ]
                 }
-            ])
+            ]);
+
+            let response2 = "";
+
+            if (response.role === "Engineer") {
+                response2 = await inquirer.prompt([{
+                    type: "input",
+                    name: "x",
+                    message: "Input the employee's github username"
+                }, ]);
+
+                const engineer = new Engineer  
+            }
         }
     }
 }
